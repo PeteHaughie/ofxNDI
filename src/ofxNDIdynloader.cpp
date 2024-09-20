@@ -202,7 +202,7 @@ bool ofxNDIdynloader::FindWinRuntime(std::string &runtime)
 #if defined(_MSC_VER)
 	_dupenv_s((char**)&p_NDI_runtime_folder, NULL, NDILIB_REDIST_FOLDER);
 #else
-	p_ndi_runtime = getenv("NDILIB_REDIST_FOLDER");
+	p_ndi_runtime_folder = getenv("NDILIB_REDIST_FOLDER");
 #endif
 	if (p_NDI_runtime_folder) {
 		// Full path to the dll
